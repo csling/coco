@@ -80,6 +80,8 @@ gem 'sidekiq-cron', '0.4.2'
 gem 'refile', '0.5.3'
 # Secure app ENV configuration
 gem 'figaro', '1.1.1'
+# Turbolinks
+gem 'turbolinks', '2.5.3'
 
 # Dev ops gems
 
@@ -124,3 +126,5 @@ group :development do
   gem 'spring', '1.6.4'
 end
 
+
+gem 'therubyracer', platforms: :ruby
