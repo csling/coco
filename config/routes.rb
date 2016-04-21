@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   get '', to: 'web_app#index'
   get 'hello_world', to: 'hello_world#index'
   # The priority is based upon order of creation: first created -> highest priority.
