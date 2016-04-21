@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
   devise_for :users
+
+  match '/auth/:provider/callback', to: 'sessions#create', via: [:get, :post]
+  match '/logout', to: 'sessions#destroy', via: [:get, :post]
+
   get '', to: 'web_app#index'
   get 'hello_world', to: 'hello_world#index'
   # The priority is based upon order of creation: first created -> highest priority.
