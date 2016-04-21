@@ -4,6 +4,8 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   before_action :authenticate_user!
 
+  acts_as_token_authentication_handler_for User
+
   protected
 
   def current_user
