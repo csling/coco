@@ -226,6 +226,10 @@ GEM
       redis-namespace (>= 1.5.2)
       rufus-scheduler (>= 2.0.24)
       sidekiq (>= 4.0.0)
+    simple_token_authentication (1.13.0)
+      actionmailer (>= 3.2.6, < 5)
+      actionpack (>= 3.2.6, < 5)
+      devise (>= 3.2, < 5)
     sinatra (1.4.7)
       rack (~> 1.5)
       rack-protection (~> 1.4)
@@ -300,6 +304,7 @@ DEPENDENCIES
   sdoc (= 0.4.1)
   sidekiq (= 4.1.1)
   sidekiq-cron (= 0.4.2)
+  simple_token_authentication (= 1.13.0)
   spring (= 1.6.4)
   surus (= 0.6.2)
   therubyracer

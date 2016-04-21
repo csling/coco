@@ -72,6 +72,7 @@ gem 'bcrypt', '3.1.11'
 # Authentication
 gem 'devise', '3.5.6'
 gem 'omniauth', '1.3.1'
+gem 'simple_token_authentication', '1.13.0'
 # Authorization
 gem 'pundit', '1.1.0'
 # Asynchronous jobs
