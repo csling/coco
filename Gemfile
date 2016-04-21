@@ -71,6 +71,7 @@ gem 'jbuilder', '2.4.1'
 gem 'bcrypt', '3.1.11'
 # Authentication
 gem 'devise', '3.5.6'
+gem 'omniauth', '1.3.1'
 # Authorization
 gem 'pundit', '1.1.0'
 # Asynchronous jobs
