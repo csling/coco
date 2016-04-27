@@ -1,4 +1,5 @@
 var React = require('react');
+var PropTypes = React.PropTypes;
 
 function Employers (props) {
   return (
@@ -13,6 +14,9 @@ function Employers (props) {
             <input 
               className="form-control" 
               placeholder="Your Name" 
+              name="name" 
+              onChange={props.onChange} 
+              value={props.name} 
               type="text"
             />
           </div>
@@ -21,6 +25,9 @@ function Employers (props) {
             <input 
               className="form-control" 
               placeholder="Email Address" 
+              name="email" 
+              onChange={props.onChange} 
+              value={props.email} 
               type="text"
             />
           </div>
@@ -29,6 +36,9 @@ function Employers (props) {
             <input 
               className="form-control" 
               placeholder="Phone Number" 
+              name="phone" 
+              onChange={props.onChange} 
+              value={props.phone} 
               type="text"
             />
           </div>
@@ -37,6 +47,9 @@ function Employers (props) {
             <textarea 
               className="form-control" 
               placeholder="Tell us more about your company" 
+              name="body" 
+              onChange={props.onChange} 
+              value={props.body} 
               type="text"
               rows="3"
             />
@@ -49,5 +62,14 @@ function Employers (props) {
     </div>
   )
 };
+
+Employers.propTypes = {
+  onSubmit: PropTypes.func.isRequired,
+  onChange: PropTypes.func.isRequired, 
+  name: PropTypes.string.isRequired,
+  email: PropTypes.string.isRequired,
+  phone: PropTypes.string.isRequired,
+  body: PropTypes.string.isRequired,
+}
 
 module.exports = Employers;

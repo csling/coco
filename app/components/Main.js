@@ -1,14 +1,15 @@
 var React = require('react');
+var PropTypes = React.PropTypes;
 var ReactRouter = require('react-router');
 var Link = ReactRouter.Link;
-var Home = require('./Home.js')
+var Home = require('./Home.js');
 
 var Main = React.createClass({
   render: function () {
     return (
       <div>
         <div className="col-md-offset-3">
-         <Link to={Home} className="col-md-2">Home</Link> 
+         <Link to='/' className="col-md-2">Home</Link> 
          <Link to='/careers' className="col-md-2">Careers</Link>
          <Link to='/about' className="col-md-2">About</Link>
          <Link to='/employers' className="col-md-2">Employers</Link>
