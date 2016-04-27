@@ -11,26 +11,40 @@ var EmployersContainer = React.createClass({
     };
   },
   handleChange: function (e) {
-    var nextState = {};
-    nextState[e.target.name] = e.target.value;
-    this.setState(nextState);
-    // this.setState({
-    //   body: e.target.value,
-    //   name: e.target.value,
-    //   email: e.target.value,
-    //   phone: e.target.value,
-    // });
+
+    // DO I NEED THESE THREE LINES OR CAN I SIMPLY DO THE COMMENTED OUT TEXT BELOW?
+    // var nextState = {};
+    // nextState[e.target.name] = e.target.value;
+    // this.setState(nextState);
+    this.setState({
+      body: e.target.value,
+      name: e.target.value,
+      email: e.target.value,
+      phone: e.target.value,
+    });
   },
 
   handleSubmit: function (e) {
     e.preventDefault();
-    console.log(e)
+
     var formData = {
-      body: e.target.body,
-      name: e.target.name,
-      email: e.target.email,
-      phone: e.target.phone,
+      body: this.state.body,
+      name: this.state.name,
+      email: this.state.email,
+      phone: this.state.phone,
     };
+
+    // WHY DOESNT THIS WORK -- I HAVE TO USE THIS.STATE INSTEAD????
+    // var formData = {
+    //   body: e.target.value,
+    //   name: e.target.value,
+    //   email: e.target.value,
+    //   phone: e.target.value,
+    // };
+
+    // WHY DOES THIS LOG TO UNDEFINED???
+    console.log(formData)
+    
 
     this.setState({
       body: '',
@@ -38,16 +52,18 @@ var EmployersContainer = React.createClass({
       email: '',
       phone: '',
     });
+    console.log(this.state)
 
     function formCallback () {
       console.log('form success!')
+      
     }
 
     $.ajax({
-      url: 'testin.com',
+      url: 'https://ben-testing.firebaseio.com/contact.json',
       dataType: 'json',
       type: 'POST',
-      data: formData,
+      data: JSON.stringify(formData),
       success: formCallback,
       error: function (xhr, status, err) {
         console.error(this.props.url, status, err.toString());
@@ -59,7 +75,7 @@ var EmployersContainer = React.createClass({
     return (
       <Employers
         onSubmit={this.handleSubmit} 
-        onChange={this.handleChange} 
+        onUpdate={this.handleChange} 
         name={this.state.name} 
         email={this.state.email} 
         phone={this.state.phone} 

@@ -15,7 +15,7 @@ function Employers (props) {
               className="form-control" 
               placeholder="Your Name" 
               name="name" 
-              onChange={props.onChange} 
+              onChange={props.onUpdate} 
               value={props.name} 
               type="text"
             />
@@ -26,7 +26,7 @@ function Employers (props) {
               className="form-control" 
               placeholder="Email Address" 
               name="email" 
-              onChange={props.onChange} 
+              onChange={props.onUpdate} 
               value={props.email} 
               type="text"
             />
@@ -37,7 +37,7 @@ function Employers (props) {
               className="form-control" 
               placeholder="Phone Number" 
               name="phone" 
-              onChange={props.onChange} 
+              onChange={props.onUpdate} 
               value={props.phone} 
               type="text"
             />
@@ -48,7 +48,7 @@ function Employers (props) {
               className="form-control" 
               placeholder="Tell us more about your company" 
               name="body" 
-              onChange={props.onChange} 
+              onChange={props.onUpdate} 
               value={props.body} 
               type="text"
               rows="3"
@@ -65,7 +65,7 @@ function Employers (props) {
 
 Employers.propTypes = {
   onSubmit: PropTypes.func.isRequired,
-  onChange: PropTypes.func.isRequired, 
+  onUpdate: PropTypes.func.isRequired, 
   name: PropTypes.string.isRequired,
   email: PropTypes.string.isRequired,
   phone: PropTypes.string.isRequired,
