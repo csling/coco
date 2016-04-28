@@ -1,24 +1,21 @@
-import React, { PropTypes, Component } from 'react'
+import React, { PropTypes } from 'react'
 
-export default class Careers extends Component {
-  render () {
-    return (
-      <div> Careers Page! </div>
-    )
-  }
+function CareerItem ({c, desc, key}) {
+  return <li>{key}</li>
 }
 
-
-// var React = require('react');
-// function FriendItem (props) {
-//   return <li>{props.friend}</li>
-// }
-// function FriendsList (props) {
-//   return (
-//     <h1>Friends:</h1>
-//     <ul>
-//       {props.friends.map((friend, index) => <FriendItem friend={friend} key={friend} />)}
-//     </ul>
-//   )
-// }
-// module.exports = FriendsList
+export default function Careers ({careers}) {
+  return (
+    <div>
+      <h1 className="text-center">Explore Careers!</h1>
+      <h2 className="text-center">Choose from one of the following awesome choices</h2>
+      <ul>
+       { [{"c": "c0", "desc0": "this is desc", "logoURL": "www", key_: 0}, 
+               {"c": "c1", "desc1": "this is desc", "logoURL": "www", key_: 1}, 
+               {"c": "c2", "desc2": "this is desc", "logoURL": "www", key_: 2}].map((career, index) => {return <li key={career.key_}>{career.c}</li> /* <CareerItem c={career.c} desc={career.desc} key={career.key_} /> */ })
+       }
+     
+      </ul>
+    </div>
+  )
+}

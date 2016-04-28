@@ -7,7 +7,7 @@ import About from '../containers/AboutContainer'
 import Story from '../components/Story'
 import Faq from '../components/Faq'
 import Employers from '../containers/EmployersContainer'
-import Careers from '../components/Careers'
+import Careers from '../containers/CareersContainer'
 
 const routes = (
   <Router history={hashHistory}>
