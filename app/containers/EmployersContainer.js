@@ -12,16 +12,16 @@ var EmployersContainer = React.createClass({
   },
   handleChange: function (e) {
 
-    // DO I NEED THESE THREE LINES OR CAN I SIMPLY DO THE COMMENTED OUT TEXT BELOW?
-    // var nextState = {};
-    // nextState[e.target.name] = e.target.value;
-    // this.setState(nextState);
-    this.setState({
-      body: e.target.value,
-      name: e.target.value,
-      email: e.target.value,
-      phone: e.target.value,
-    });
+    // HOW COME THESE NEXT 3 LINES WORK BUT WHEN I REPLACE WITH THIS.SETSTATE, IT CHANGES EACH FORM FIELD ALTOGETHER
+    var nextState = {};
+    nextState[e.target.name] = e.target.value;
+    this.setState(nextState);
+    // this.setState({
+    //   body: e.target.value,
+    //   name: e.target.value,
+    //   email: e.target.value,
+    //   phone: e.target.value,
+    // });
   },
 
   handleSubmit: function (e) {
@@ -34,7 +34,7 @@ var EmployersContainer = React.createClass({
       phone: this.state.phone,
     };
 
-    // WHY DOESNT THIS WORK -- I HAVE TO USE THIS.STATE INSTEAD????
+    // WHY DOESNT THIS WORK -- I HAVE TO USE THIS.STATE INSTEAD (ABOVE) ????
     // var formData = {
     //   body: e.target.value,
     //   name: e.target.value,
@@ -42,21 +42,15 @@ var EmployersContainer = React.createClass({
     //   phone: e.target.value,
     // };
 
-    // WHY DOES THIS LOG TO UNDEFINED???
-    console.log(formData)
-    
-
     this.setState({
       body: '',
       name: '',
       email: '',
       phone: '',
     });
-    console.log(this.state)
 
     function formCallback () {
       console.log('form success!')
-      
     }
 
     $.ajax({
