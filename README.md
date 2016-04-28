@@ -1,8 +1,4 @@
-# react-boiler
-simple boiler plate for future react apps using:
-> uses webpack and babel to compile JSX to JS and hotloading
-> uses react router for routing URLs
-
+React App with routing
 
 To Start Local Dev Env:
 
