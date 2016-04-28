@@ -1,32 +1,35 @@
-var React = require('react');
-var Employers = require('../components/Employers');
+import React, { PropTypes, Component } from 'react'
+import Employers from '../components/Employers'
 
-var EmployersContainer = React.createClass({
-  getInitialState: function () {
-    return {
+export default class EmployersContainer extends Component {
+  constructor (props) {
+    super()
+    this.state = {
       name: '',
       email: '',
       phone: '', 
       body: '',
-    };
-  },
-  handleChange: function (e) {
+    }
+  }
+
+  handleChange (e) {
 
     // HOW COME THESE NEXT 3 LINES WORK BUT WHEN I REPLACE WITH THIS.SETSTATE, IT CHANGES EACH FORM FIELD ALTOGETHER
     var nextState = {};
     nextState[e.target.name] = e.target.value;
     this.setState(nextState);
+
     // this.setState({
     //   body: e.target.value,
     //   name: e.target.value,
     //   email: e.target.value,
     //   phone: e.target.value,
     // });
-  },
+  }
 
-  handleSubmit: function (e) {
+  handleSubmit (e) {
     e.preventDefault();
-
+    
     var formData = {
       body: this.state.body,
       name: this.state.name,
@@ -62,14 +65,14 @@ var EmployersContainer = React.createClass({
       error: function (xhr, status, err) {
         console.error(this.props.url, status, err.toString());
       }.bind(this)
-    });
-  },
+    })
+  }
 
-  render: function () {
+  render () {
     return (
       <Employers
-        onSubmit={this.handleSubmit} 
-        onUpdate={this.handleChange} 
+        onSubmit={(e) => this.handleSubmit(e)} 
+        onUpdate={(e) => this.handleChange(e)} 
         name={this.state.name} 
         email={this.state.email} 
         phone={this.state.phone} 
@@ -77,6 +80,4 @@ var EmployersContainer = React.createClass({
       />
     )
   }
-});
-
-module.exports = EmployersContainer;
+} 

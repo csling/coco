@@ -1,7 +1,6 @@
-var React = require('react');
-var PropTypes = React.PropTypes;
+import React, { PropTypes } from 'react'
 
-function About (props) {
+export default function About (props) {
   return (
     <div>
       <h1 className="text-center">Our Mission</h1>
@@ -12,4 +11,3 @@ function About (props) {
   )
 }
 
-module.exports = About;

@@ -1,15 +1,12 @@
-var React = require('react');
-var PropTypes = React.PropTypes;
+import React, { PropTypes, Component } from 'react'
 
-var Careers = React.createClass({
-  render: function () {
+export default class Careers extends Component {
+  render () {
     return (
       <div> Careers Page! </div>
     )
   }
-});
-
-module.exports = Careers;
+}
 
 
 // var React = require('react');

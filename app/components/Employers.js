@@ -1,22 +1,21 @@
-var React = require('react');
-var PropTypes = React.PropTypes;
+import React, { PropTypes } from 'react'
 
-function Employers (props) {
+export default function Employers ({onSubmit, onUpdate, name, email, phone, body}) {
   return (
     <div>
       <h1 className="text-center">Hire the Best Talent</h1>
       <p className="col-md-10 col-md-offset-1">We believe that career changers with law degrees are an untapped resource for companies at any stage of the growth cycle. Their time achieving their JD and in challenging environments has molded them into uniquely intelligent, talented, and hard-working individuals. Our goal is to connect you to them.</p>
       <p className="col-md-10 col-md-offset-1">If you are interested in bringing this type of talent to your workplace, contact us below.</p>
       <div className=" col-md-6 col-md-offset-3">
-        <form onSubmit={props.onSubmit}>
+        <form onSubmit={onSubmit}>
           <div className="form-group">
             <label for="name" className="sr-only">Your Name</label>
             <input 
               className="form-control" 
               placeholder="Your Name" 
               name="name" 
-              onChange={props.onUpdate} 
-              value={props.name} 
+              onChange={onUpdate} 
+              value={name} 
               type="text"
             />
           </div>
@@ -26,8 +25,8 @@ function Employers (props) {
               className="form-control" 
               placeholder="Email Address" 
               name="email" 
-              onChange={props.onUpdate} 
-              value={props.email} 
+              onChange={onUpdate} 
+              value={email} 
               type="text"
             />
           </div>
@@ -37,8 +36,8 @@ function Employers (props) {
               className="form-control" 
               placeholder="Phone Number" 
               name="phone" 
-              onChange={props.onUpdate} 
-              value={props.phone} 
+              onChange={onUpdate} 
+              value={phone} 
               type="text"
             />
           </div>
@@ -48,8 +47,8 @@ function Employers (props) {
               className="form-control" 
               placeholder="Tell us more about your company" 
               name="body" 
-              onChange={props.onUpdate} 
-              value={props.body} 
+              onChange={onUpdate} 
+              value={body} 
               type="text"
               rows="3"
             />
@@ -72,4 +71,3 @@ Employers.propTypes = {
   body: PropTypes.string.isRequired,
 }
 
-module.exports = Employers;

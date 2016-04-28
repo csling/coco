@@ -1,14 +1,12 @@
-var React = require('react');
-var About = require('../components/About');
+import React, { PropTypes, Component } from 'react'
+import About from '../components/About'
 
-var AboutContainer = React.createClass({
-  render: function () {
+export default class AboutContainer extends Component {
+  render () {
     return (
       <div>
         <About />      
       </div>
     )
   }
-});
-
-module.exports = AboutContainer;
+}

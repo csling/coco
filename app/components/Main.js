@@ -1,11 +1,9 @@
-var React = require('react');
-var PropTypes = React.PropTypes;
-var ReactRouter = require('react-router');
-var Link = ReactRouter.Link;
-var Home = require('./Home.js');
+import React, { PropTypes, Component } from 'react'
+import { Router, Link } from 'react-router'
+import Home from './Home.js'
 
-var Main = React.createClass({
-  render: function () {
+export default class Main extends Component {
+  render () {
     return (
       <div>
         <div className="col-md-offset-3">
@@ -22,6 +20,4 @@ var Main = React.createClass({
       </div>
     )
   }
-});
-
-module.exports = Main;
+}

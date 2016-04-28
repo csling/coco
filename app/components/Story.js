@@ -1,12 +1,9 @@
-var React = require('react');
-var PropTypes = React.PropTypes;
+import React, { PropTypes, Component } from 'react'
 
-var Story = React.createClass({
-  render: function () {
+export default class Story extends Component {
+  render () {
     return (
       <div> Story Page! </div>
     )
   }
-});
-
-module.exports = Story;
+}
