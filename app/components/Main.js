@@ -1,11 +1,12 @@
 import React, { PropTypes, Component } from 'react'
 import { Router, Link } from 'react-router'
-import Home from './Home.js'
+import Home from './Home'
+import { header } from '../styles'
 
 export default class Main extends Component {
   render () {
     return (
-      <div>
+      <div className="header">
         <div className="col-md-offset-3">
          <Link to='/' className="col-md-2">Home</Link> 
          <Link to='/careers' className="col-md-2">Careers</Link>

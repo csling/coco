@@ -5,11 +5,7 @@ export default class CareersContainer extends Component {
   constructor () {
     super ()
     this.state = {
-      careers: [
-        {"c": "c0", "desc0": "this is desc", "logoURL": "www", key_: 0}, 
-        {"c": "c1", "desc1": "this is desc", "logoURL": "www", key_: 1}, 
-        {"c": "c2", "desc2": "this is desc", "logoURL": "www", key_: 2}, 
-      ]
+      careers: []
     }
   }
   componentDidMount () {
@@ -19,6 +15,7 @@ export default class CareersContainer extends Component {
       // example: 
         // async componentDidMount(){}
         // const careers = await getCareerInfo( ) // careers = array of resolved promises 
+        // dont forget to wrap in try/catch block
       
     this.setState({
       careers: [
@@ -27,14 +24,12 @@ export default class CareersContainer extends Component {
         {"c": "c2", "desc": "this is desc", "logoURL": "www", key_: 2}, 
       ]
     })
-    console.log(this.state.careers)
-    console.log(JSON.stringify(this.state.careers))
   }
 
   render () { 
     return (
       <Careers 
-        careers={this.state}
+        careers={this.state.careers.map((career) => {return career})}
        />
     )
   }
