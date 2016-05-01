@@ -1,4 +1,27 @@
+@import '../../styles/base';
+
 .activeRoute {
   font-weight: bold;
   text-decoration: underline;
+}
+
+.logoContainer {
+  flex-grow: 1;
+  height: 100%;
+  width: 100px;
+}
+
+.navbarContainer {
+  border: 3px solid $navbar-border-color;
+  display: flex;
+  flex-direction: row-reverse;
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+.routeContainer {
+  flex-basis: 150px;
+  height: 25px;
+  position: relative;
+  top: 25%;
 }
