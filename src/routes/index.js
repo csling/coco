@@ -16,6 +16,7 @@ export const createRoutes = (store) => {
         next(null, [
           // Provide store for async reducers and middleware
           require('./Counter').default(store),
+          require('./Login').default(store),
           require('./NotFound').default
         ])
       })
