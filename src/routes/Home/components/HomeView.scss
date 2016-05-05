@@ -1,5 +1,71 @@
-.duck {
-  display: block;
-  width: 120px;
-  margin: 1.5rem auto;
+@import '../../../styles/base';
+
+// HEADER STYLES //
+.headerMajor {
+  font-family: $header-font-family;
+  font-size: 30px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.headerMinor {
+  font-family: $header-font-family;
+  font-size: 20px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  width: 90%;
+}
+
+// BUTTON STYLES //
+
+.buttonContainer {
+  background-color: mediumaquamarine;
+  border-radius: 20px;
+  color: white;
+  cursor: pointer;
+  font-size: 20px;
+  height: 50px;
+  width: 200px;
+  margin: 0 auto;
+  padding: 10px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+// STEP STYLES //
+
+.stepDescription {
+  font-size: 14px;
+}
+
+.stepContainer {
+  flex-basis: 200px;
+  flex-grow: 1;
+}
+
+.stepContent {
+  width: 200px;
+  margin: 0 auto;
+}
+
+.stepsContainer {
+  display: flex;
+  flex-flow: row wrap;
+  height: 250px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.stepTitleMajor {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  width: 100%;
+}
+
+.stepTitleMinor {
+  font-size: 16px;
+  margin-bottom: 5px;
+  width: 100%;
 }
