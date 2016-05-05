@@ -10,6 +10,9 @@ import config from '../config'
 import webpackDevMiddleware from './middleware/webpack-dev'
 import webpackHMRMiddleware from './middleware/webpack-hmr'
 
+import passport from './lib/auth'
+import _ from 'koa-route'
+
 const debug = _debug('app:server')
 const paths = config.utils_paths
 const app = new Koa()
@@ -19,12 +22,29 @@ if (config.proxy && config.proxy.enabled) {
   app.use(convert(proxy(config.proxy.options)))
 }
 
+app.use(passport.initialize())
+
+app.use(_.get('/auth/linkedin',
+  passport.authenticate('linkedin', { state: 'SOME STATE'  }),
+  function(req, res){
+    // The request will be redirected to LinkedIn for authentication, so this
+    // function will not be called.
+  }
+))
+
 // This rewrites all routes requests to the root /index.html file
 // (ignoring file requests). If you want to implement isomorphic
 // rendering, you'll want to remove this middleware.
 app.use(convert(historyApiFallback({
   verbose: false
 })))
+
+//The auth callbacks are placed beneath the redirect to the root /index.html file, as the callback redirects go
+//back to root
+app.use(_.get('/auth/linkedin/callback'),
+  passport.authenticate('linkedin', { successRedirect: '/', failureRedirect: '/'}
+  )
+)
 
 // ------------------------------------
 // Apply Webpack HMR Middleware
