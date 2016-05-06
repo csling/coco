@@ -1,0 +1,40 @@
+@import '../../../styles/base';
+
+// ABOUT PAGE CONTAINER
+.aboutContainer {
+  margin: 50px 20px;
+}
+
+// SIDEBAR STYLES
+.navSidebarContainer {
+  display: block;
+  margin-bottom: 50px;
+  width: 100%;
+}
+
+.navSidebarTab {
+  clear: left;
+  cursor: pointer;
+  display: inline-block;
+  float: left;
+  font-family: $sidebar-font-family;
+  font-size: 30px;
+  text-transform: uppercase;
+  width: auto;
+}
+
+.paneTitle {
+  font-family: $header-font-family;
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.paneContent {
+  text-align: justify;
+}
+
+.aboutPane {
+  display: inline-block;
+  margin-bottom: 25px;
+}
+
