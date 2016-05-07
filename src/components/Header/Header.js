@@ -10,7 +10,7 @@ export const Header = () => (
       </Link>
     </div>
     <div className={classes.routeContainer}>
-      <Link to='/employers' activeClassName={classes.activeRoute}>
+      <Link to='/for_employers' activeClassName={classes.activeRoute}>
         For Employers
       </Link>
     </div>
