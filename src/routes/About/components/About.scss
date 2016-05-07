@@ -1,0 +1,68 @@
+@import '../../../styles/base';
+
+// ABOUT PAGE CONTAINER
+.aboutContainer {
+  margin: 0px 20px;
+}
+
+// SIDEBAR STYLES
+.navSidebarContainer {
+  display: inline-block;
+  margin-bottom: 50px;
+  width: 100%;
+}
+
+.navSidebarTab {
+  clear: left;
+  cursor: pointer;
+  display: inline-block;
+  float: left;
+  font-family: $sidebar-font-family;
+  font-size: 30px;
+  text-transform: uppercase;
+  width: auto;
+}
+
+.navSidebarTabActive {
+  clear: left;
+  color: #23527c;
+  cursor: default;
+  display: inline-block;
+  float: left;
+  font-family: $sidebar-font-family;
+  font-size: 30px;
+  text-decoration: underline;
+  text-transform: uppercase;
+  width: auto;
+}
+
+// PANES
+
+.aboutPane {
+  display: none;
+  margin-bottom: 25px;
+  opacity: 0;
+}
+
+.aboutPaneActive {
+  animation: fadeInPane 0.5s linear;
+  display: block;
+  margin-bottom: 25px;
+  opacity: 1;
+}
+
+.paneTitle {
+  font-family: $header-font-family;
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.paneContent {
+  text-align: justify;
+}
+
+// ANIMATIONS
+@keyframes fadeInPane {
+  0%   {filter: blur(2px); opacity: 0; transform: translate(0px, 20px)}
+  100% {filter: blur(0px); opacity: 1; transform: translate(0px, 0px)}
+}
