@@ -1,0 +1,56 @@
+@import '../../../styles/base';
+
+// FOR EMPLOYERS PAGE CONTAINER
+.userSignUpContainer {
+  margin: 0px auto;
+  text-align: center;
+  width: 75%;
+}
+
+// HEADER
+.header {
+  margin-bottom: 20px;
+  font-size: 30px;
+}
+
+// BANNER
+.banner {
+  display: flex;
+  margin: 0px auto;
+  margin-bottom: 20px;
+  width: 80%;
+}
+
+.bannerImage {
+  font-size: 100px;
+  width: auto;
+}
+
+.bannerImageLine {
+  border: 2px solid grey;
+  flex-grow: 1;
+  height: 1px;
+  margin: auto 10px;
+}
+
+.userIcon {
+  color: orangered;
+}
+
+.circleArrowIcon {
+  color: darkseagreen;
+}
+
+.handRightIcon {
+  color: navy;
+}
+
+// TEXT CONTENT
+
+.content {
+  font-size: 20px;
+  margin: 0px auto;
+  margin-bottom: 20px;
+  text-align: center;
+  width: 80%;
+}

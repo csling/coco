@@ -3,6 +3,7 @@ import CoreLayout from '../layouts/CoreLayout/CoreLayout'
 import Home from './Home'
 import AboutRoute from './About'
 import ForEmployersRoute from './ForEmployers'
+import SignUpRoute from './SignUp'
 
 export const createRoutes = (store) => ({
   path: '/',
@@ -10,7 +11,8 @@ export const createRoutes = (store) => ({
   indexRoute: Home,
   childRoutes: [
     AboutRoute(store),
-    ForEmployersRoute(store)
+    ForEmployersRoute(store),
+    SignUpRoute(store)
   ]
 })
 
