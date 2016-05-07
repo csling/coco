@@ -2,16 +2,19 @@ import React from 'react'
 import classes from './ForEmployers.scss'
 import { connect } from 'react-redux'
 import { initialize } from 'redux-form';
+
+import { submitEmployerForm } from '../modules/forEmployers'
+
 import EmployerContactForm from 'forms/EmployerContactForm/EmployerContactForm'
 
 type Props = {
 
 }
 export class ForEmployers extends React.Component {
-  props:Props;
+  props: Props;
 
   handleSubmit(data) {
-
+    submitEmployerForm(data)
   }
 
   render() {
@@ -24,20 +27,21 @@ export class ForEmployers extends React.Component {
           you to them.</p>
         <p className={classes.content}>If you are interested in bringing this type of talent to your workplace,
         contact us below.</p>
-        <EmployerContactForm onSubmit={() => this.handleSubmit}/>
+        <EmployerContactForm onSubmit={this.handleSubmit}/>
       </div>
     )
   }
 }
 
-const mapStateToProps = (state) => {
-  return {}
+const mapActionCreators = {
+  submitEmployerForm
 }
-const mapDispatchToProps = (dispatch) => {
-  return {}
-}
+
+const mapStateToProps = (state) => ({
+  success: state.success
+})
 
 export default connect(
 mapStateToProps,
-mapDispatchToProps
+mapActionCreators
 )(ForEmployers)

@@ -1,3 +1,5 @@
+import { injectReducer } from '../../store/reducers' 
+
 export default (store) => ({
   path: 'for_employers',
   /*  Async getComponent is only invoked when route matches   */
@@ -8,6 +10,9 @@ export default (store) => ({
       /*  Webpack - use require callback to define
        dependencies for bundling   */
       const ForEmployers = require('./containers/ForEmployers').default
+      const reducer = require('./modules/forEmployers').default
+
+      injectReducer(store, { key: 'forEmployers', reducer })
 
       /*  Return getComponent   */
       cb(null, ForEmployers)

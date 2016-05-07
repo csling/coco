@@ -3,20 +3,18 @@ import classes from './EmployerContactForm.scss'
 import {reduxForm} from 'redux-form';
 import validateEmployerContact from './validateEmployerContactForm';
 
-export const fields = ['contactName',
+export const fields = ['contactMessage',
+  'contactName',
   'companyName',
   'contactEmailAddress',
   'contactPhoneNumber'
 ]
 
-const validate = (values) => {
-  const errors = {}
-  return errors
-}
-
 type Props = {
   handleSubmit: Function,
   fields: Object,
+  submitting: Boolean,
+  success: Boolean
 }
 
 export class EmployerContactForm extends React.Component {
@@ -24,10 +22,12 @@ export class EmployerContactForm extends React.Component {
 
   defaultProps = {
     fields: {contactMessage: '', contactName: '', companyName: '', contactEmailAddress: '', contactPhoneNumber: ''},
+    submitting: false,
+    success: false
   }
 
   render() {
-    const { fields, handleSubmit } = this.props
+    const { fields, handleSubmit, submitting, success } = this.props
 
     return (
       <form className={classes.employerContactFormContainer} onSubmit={handleSubmit}>
@@ -60,10 +60,16 @@ export class EmployerContactForm extends React.Component {
   }
 }
 
+EmployerContactForm.propTypes = {
+  fields: React.PropTypes.object.isRequired,
+  handleSubmit: React.PropTypes.func.isRequired,
+  submitting: React.PropTypes.bool.isRequired
+  // success: React.PropTypes.bool.isRequired
+}
+
 EmployerContactForm = reduxForm({
   form: 'employerContact',
   fields,
-  validate: validateEmployerContact
 })(EmployerContactForm)
 
 export default EmployerContactForm
