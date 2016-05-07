@@ -64,6 +64,8 @@ EmployerContactForm.propTypes = {
   fields: React.PropTypes.object.isRequired,
   handleSubmit: React.PropTypes.func.isRequired,
   submitting: React.PropTypes.bool.isRequired
+
+  // The success prop has been commented out from propTypes because it raises a warning message; to be fixed later
   // success: React.PropTypes.bool.isRequired
 }
 
