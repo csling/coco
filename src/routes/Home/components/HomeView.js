@@ -1,6 +1,7 @@
 import React from 'react'
-// import DuckImage from '../assets/Duck.jpg'
 import classes from './HomeView.scss'
+
+import FontAwesome from 'react-fontawesome'
 
 export const HomeView = () => (
   <div>
@@ -10,6 +11,9 @@ export const HomeView = () => (
     <div className={classes.stepsContainer}>
       <div className={classes.stepContainer}>
         <div className={classes.stepContent}>
+          <div className={classes.stepImage}>
+            <FontAwesome className={classes.stepOneIcon} name='search'/>
+          </div>
           <div className={classes.stepTitleMinor}>Step 1</div>
           <div className={classes.stepTitleMajor}>Explore</div>
           <p className={classes.stepDescription}>Browse through careers that lawyers commonly transition to. See info on
@@ -18,6 +22,9 @@ export const HomeView = () => (
       </div>
       <div className={classes.stepContainer}>
         <div className={classes.stepContent}>
+          <div className={classes.stepImage}>
+            <FontAwesome className={classes.stepTwoIcon} name='user'/>
+          </div>
           <div className={classes.stepTitleMinor}>Step 2</div>
           <div className={classes.stepTitleMajor}>Interact</div>
           <p className={classes.stepDescription}>Get connected to former lawyers who have made the exact career change
@@ -26,6 +33,9 @@ export const HomeView = () => (
       </div>
       <div className={classes.stepContainer}>
         <div className={classes.stepContent}>
+          <div className={classes.stepImage}>
+            <FontAwesome className={classes.stepThreeIcon} name='arrow-circle-o-up'/>
+          </div>
           <div className={classes.stepTitleMinor}>Step 3</div>
           <div className={classes.stepTitleMajor}>Learn</div>
           <p className={classes.stepDescription}>Develop the skills and industry knowledge you need to get the job and be
@@ -34,6 +44,9 @@ export const HomeView = () => (
       </div>
       <div className={classes.stepContainer}>
         <div className={classes.stepContent}>
+          <div className={classes.stepImage}>
+            <FontAwesome className={classes.stepFourIcon} name='hand-o-right'/>
+          </div>
           <div className={classes.stepTitleMinor}>Step 4</div>
           <div className={classes.stepTitleMajor}>Prepare</div>
           <p className={classes.stepDescription}>Receive resume, application and interview strategy help from a team of
