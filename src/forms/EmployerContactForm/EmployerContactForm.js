@@ -72,6 +72,7 @@ EmployerContactForm.propTypes = {
 EmployerContactForm = reduxForm({
   form: 'employerContact',
   fields,
+  validate: validateEmployerContact
 })(EmployerContactForm)
 
 export default EmployerContactForm
