@@ -61,6 +61,43 @@
   text-align: justify;
 }
 
+// PROFILE PANELS
+.profilePanels {
+  display: flex;
+  margin-top: 30px;
+}
+
+.profilePanel {
+  flex-basis: 0px;
+  flex-grow: 1;
+}
+
+.profileAvatar {
+  border: 1px solid grey;
+  margin: 30px auto;
+  height: 100px;
+  text-align: center;
+  width: 100px;
+}
+
+.avatarImage {
+  font-size: 100px;
+}
+
+.profileName {
+  font-size: 20px;
+  text-align: center;
+}
+
+.profileText {
+  border: 1px solid grey;
+  margin: 30px 20px;
+}
+
+.profileText > ul {
+  padding: 15px 30px;
+}
+
 // ANIMATIONS
 @keyframes fadeInPane {
   0%   {filter: blur(2px); opacity: 0; transform: translate(0px, 20px)}
