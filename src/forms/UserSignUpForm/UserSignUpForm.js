@@ -48,7 +48,7 @@ export class UserSignUpForm extends React.Component {
           <input type="checkbox"/>
           <label className={classes.termsAndPolicyAgreement}>I agree to the Course Correct Terms & Privacy Policy</label>
         </div>
-        <button type="submit">Submit</button>
+        <button className={classes.submitButton} type="submit">Submit</button>
       </form>
     )
   }
@@ -66,7 +66,7 @@ UserSignUpForm.propTypes = {
 UserSignUpForm = reduxForm({
   form: 'userSignUp',
   fields,
-  validate: validateUserSignUpForm
+  // validate: validateUserSignUpForm
 })(UserSignUpForm)
 
 export default UserSignUpForm
