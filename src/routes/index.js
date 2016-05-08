@@ -4,6 +4,7 @@ import Home from './Home'
 import AboutRoute from './About'
 import ForEmployersRoute from './ForEmployers'
 import SignUpRoute from './SignUp'
+import NotFound from './NotFound'
 
 export const createRoutes = (store) => ({
   path: '/',
@@ -12,7 +13,8 @@ export const createRoutes = (store) => ({
   childRoutes: [
     AboutRoute(store),
     ForEmployersRoute(store),
-    SignUpRoute(store)
+    SignUpRoute(store),
+    NotFound
   ]
 })
 
