@@ -1,6 +1,8 @@
 import React from 'react'
 import classes from './About.scss'
 
+import FontAwesome from 'react-fontawesome'
+
 type Props = {
 
 }
@@ -65,22 +67,56 @@ export class About extends React.Component {
         <div className={this.state.selectedPane === 1 ? classes.aboutPaneActive: classes.aboutPane}>
           <div className={classes.paneTitle}>Our Story</div>
           <div className={classes.paneContent}>
-            <p>There are no mistakes. You can fix anything that happens. Now we don't want him to get lonely, so we'll
-              give
-              him a little friend. The first step to doing anything is to believe you can do it. See it finished in your
-              mind before you ever start.</p>
-
-            <p>A thin paint will stick to a thick paint. I'm gonna start with a little Alizarin crimson and a touch of
-              Prussian blue In this world, everything can be happy. And I will hypnotize that just a little bit.</p>
-
-            <p>We start with a vision in our heart, and we put it on canvas. Let's do it again then, what the heck.
-              Don't
-              be afraid to make these big decisions. Once you start, they sort of just make themselves. Use your
-              imagination, let it go. Just let your mind wander and enjoy. This should make you happy.</p>
-
-            <p>Let that brush dance around there and play. See there how easy that is. We must be quiet, soft and
-              gentle.
-              Get tough with it, get strong. There it is.</p>
+            <div className={classes.profilePanels}>
+              <div className={classes.profilePanel}>
+                <div className={classes.profileAvatar}>
+                  <FontAwesome className={classes.avatarImage} name="user"/>
+                </div>
+                <div className={classes.profileName}>Misha Vargas</div>
+                <div className={classes.profileText}>
+                  <ul>
+                    <li>Transitioned from the bench to sales</li>
+                    <li>Generally swell guy</li>
+                    <li>Was viciously heckled at his own wedding</li>
+                    <li>Loves the Simpsons and is fighting to keep New Haverbrook on the map</li>
+                    <li>Self-proclaimed best sumo wrestler in LA</li>
+                    <li>Stupidly likes all teams from Oakland even though they're awful and never win anything</li>
+                  </ul>
+                </div>
+              </div>
+              <div className={classes.profilePanel}>
+                <div className={classes.profileAvatar}>
+                  <FontAwesome className={classes.avatarImage} name="user"/>
+                </div>
+                <div className={classes.profileName}>Christian Ling</div>
+                <div className={classes.profileText}>
+                  <ul>
+                    <li>Computer-science-grad-turned-lawyer-turned-software-developer</li>
+                    <li>Recovering karaoke addict</li>
+                    <li>Responsible for this website (but only the good parts; bugs and broken features are Taylor and
+                      Misha's fault!)</li>
+                    <li>Fairweather fan of the sports teams from whatever city he's currently in</li>
+                  </ul>
+                </div>
+              </div>
+              <div className={classes.profilePanel}>
+                <div className={classes.profileAvatar}>
+                  <FontAwesome className={classes.avatarImage} name="user"/>
+                </div>
+                <div className={classes.profileName}>Taylor Hollenbeck</div>
+                <div className={classes.profileText}>
+                  <ul>
+                    <li>Husband of a lawyer</li>
+                    <li>Made career transitions from Psychology to Marketing to Sales to Marketing</li>
+                    <li>Was the one heckling Misha at his wedding</li>
+                    <li>Hopes it was Flanders</li>
+                    <li>Recently traveled the world, going to 12 countries</li>
+                    <li>Correctly likes all the teams from San Francisco. Three World Series Championships in five
+                      years</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <div className={this.state.selectedPane === 2 ? classes.aboutPaneActive: classes.aboutPane}>
