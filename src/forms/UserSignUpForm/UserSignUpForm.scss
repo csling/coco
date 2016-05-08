@@ -32,8 +32,13 @@ input {
 }
 
 // BUTTONS
-button {
+.submitButton {
+  background-color: mediumaquamarine;
+  border: none;
+  border-radius: 25px;
+  color: white;
   margin-top: 10px;
+  padding: 10px 50px;
 }
 
 // CHECKBOX
@@ -44,6 +49,7 @@ input[type='checkbox'] {
 .termsAndPolicyAgreement {
   font-size: 14px;
   margin-left: 10px;
+  margin-top: 30px;
   width: auto;
   text-align: left;
 }
