@@ -21,9 +21,9 @@ const modalStyles = {
   content : {
     position                   : 'absolute',
     top                        : '25%',
-    left                       : '25%',
-    right                      : '25%',
-    bottom                     : '25%',
+    left                       : '30%',
+    right                      : '30%',
+    bottom                     : '35%',
     border                     : '1px solid #ccc',
     background                 : '#fff',
     overflow                   : 'auto',
@@ -119,12 +119,8 @@ export class HomeView extends React.Component {
             Do you already know which non-legal career you want to transition into?
           </div>
           <div className={classes.modalRedirectButtons}>
-            <div className={classes.modalredirectButton}>
-              <Link className={classes.modalRedirectButtons} to='/signup'>Yes</Link>
-            </div>
-            <div className={classes.modalredirectButton}>
-              <Link className={classes.modalRedirectButtons} to='/careers'>No</Link>
-            </div>
+            <Link className={classes.modalRedirectButton} to='/signup'>Yes</Link>
+            <Link className={classes.modalRedirectButton} to='/careers'>No</Link>
           </div>
         </Modal>
       </div>
