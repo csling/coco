@@ -41,8 +41,8 @@ const careerTileInformation = [
 ]
 
 export class CareerSearch extends React.Component {
-  props: Props;
 
+  props: Props;
 
   render() {
     return (
