@@ -93,6 +93,10 @@ export class CareerProfile extends React.Component {
     this.setState({expanded: updatedExpanded})
   }
 
+  goBack() {
+    this.props.router.goBack()
+  }
+
   render() {
     if (!this.state.career) {
       return <div></div>
@@ -105,8 +109,13 @@ export class CareerProfile extends React.Component {
             && <FontAwesome className={classes.faIcon} name={this.state.career.faIcon}/>}
           </div>
 
-          <div className={classes.backButton}>Back</div>
-          <div className={classes.title}>{this.state.career.title}</div>
+          <div className={classes.title}>
+            <div className={classes.backButton} onClick={this.goBack.bind(this)}>
+              <div className={classes.arrowHead}></div>
+              <div className={classes.arrowBody}>Back</div>
+            </div>
+            <span>{this.state.career.title}</span>
+          </div>
 
           <div className={classes.informationLabel}
                data-expand-target="description"

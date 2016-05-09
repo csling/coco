@@ -10,16 +10,41 @@
 }
 
 .backButton {
+  cursor: pointer;
+}
+
+.arrowHead {
+  border-bottom: 18px solid transparent;
+  border-right: 18px solid lightgray;
+  border-top: 18px solid transparent;
+  float: left;
+  height: 0px;
+  margin-top: 5px;
+  width: 0px;
+}
+
+.arrowBody {
+  background-color: lightgray;
+  color: white;
+  float: left;
   font-size: 18px;
+  height: 35px;
+  margin-top: 5px;
+  padding: 5px;
+  width: 75px;
 }
 
 .title {
   font-size: 30px;
 }
 
+.title > span {
+  position: relative;
+  right: 47px;
+}
+
 .collapseIcon {
   margin-right: 10px;
-  pointer-events: none;
 }
 
 .expandIcon {
