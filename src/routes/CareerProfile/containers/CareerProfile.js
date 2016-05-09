@@ -62,10 +62,26 @@ export class CareerProfile extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
+      expanded: {
+        description: true,
+        exampleTasks: true,
+        jobMetrics: true,
+        transferableSkills: true,
+        skillGaps: true
+      }
+
     }
   }
 
   props:Props;
+
+  toggleExpand(e) {
+    let target = e.target.getAttribute('data-expand-target')
+
+    let updatedExpanded = this.state.expanded
+    updatedExpanded[target] = !updatedExpanded[target]
+    this.setState({expanded: updatedExpanded})
+  }
 
   render() {
     return (
@@ -79,110 +95,189 @@ export class CareerProfile extends React.Component {
         <div className={classes.backButton}>Back</div>
         <div className={classes.title}>{careerProfileInformation.title}</div>
 
-        <div className={classes.descriptionLabel}>Job Description</div>
-        <div className={classes.informationContainer}>
-          <div className={classes.description}>
-            {careerProfileInformation.description.map(function(descriptionParagraph, index) {
-              return <p key={index}>{descriptionParagraph}</p>
-            })}
-          </div>
+        <div className={classes.informationLabel}
+             data-expand-target="description"
+             onClick={this.toggleExpand.bind(this)}>
+          <FontAwesome className={this.state.expanded.description ?
+                        classes.collapseIcon :
+                        classes.expandIcon}
+                       name={this.state.expanded.description ?
+                        'minus-circle' :
+                        'plus-circle'}
+          />
+          <span>Job Description</span>
         </div>
-
-        <div className={classes.exampleTasksLabel}>Examples of Tasks Performed on this Job</div>
-        <div className={classes.informationContainer}>
-          <div className={classes.exampleTasks}>
-            <ul>
-              {careerProfileInformation.exampleTasks.map(function(exampleTask, index) {
-                return <li key={index}>{exampleTask}</li>
+        <div className={this.state.expanded.description ?
+               classes.informationContainerExpanded :
+               classes.informationContainerCollapsed}>
+          <div className={classes.informationContent}>
+            <div className={classes.description}>
+              {careerProfileInformation.description.map(function(descriptionParagraph, index) {
+                return <p key={index}>{descriptionParagraph}</p>
               })}
-            </ul>
+            </div>
           </div>
         </div>
 
-        <div className={classes.jobMetricsLabel}>Job Metrics (relative to other potions)</div>
-        <div className={classes.informationContainer}>
-          <div className={classes.jobMetrics}>
-            <div className={classes.jobMetric}>
-              <div className={classes.salary}>
-                <div className={classes.jobMetricSliderLabel}>
-                  Salary
-                </div>
-                <Slider className={classes.jobMetricSlider}
-                        defaultValue={careerProfileInformation.jobMetrics.salary}
-                        disabled={true}
-                        included={true}
-                        max={jobMetricsInformation.upperSalaryBound}
-                        marks={{50000: 'Less', 150000: 'More'}}
-                        min={jobMetricsInformation.lowerSalaryBound}
-                        step={1000}
-                        tipFormatter={(salary) => {
+        <div className={classes.informationLabel}
+             data-expand-target="exampleTasks"
+             onClick={this.toggleExpand.bind(this)}>
+          <FontAwesome className={this.state.expanded.exampleTasks ?
+                        classes.collapseIcon :
+                        classes.expandIcon}
+                       name={this.state.expanded.exampleTasks ?
+                        'minus-circle' :
+                        'plus-circle'}
+          />
+          <span>Examples of Tasks Performed on this Job</span>
+        </div>
+        <div className={this.state.expanded.exampleTasks ?
+              classes.informationContainerExpanded :
+              classes.informationContainerCollapsed}
+             data-collapse-id="exampleTasks">
+          <div className={classes.informationContent}>
+            <div className={classes.exampleTasks}>
+              <ul>
+                {careerProfileInformation.exampleTasks.map(function(exampleTask, index) {
+                  return <li key={index}>{exampleTask}</li>
+                })}
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div className={classes.informationLabel}
+             data-expand-target="jobMetrics"
+             onClick={this.toggleExpand.bind(this)}>
+          <FontAwesome className={this.state.expanded.jobMetrics ?
+                        classes.collapseIcon :
+                        classes.expandIcon}
+                       name={this.state.expanded.jobMetrics ?
+                        'minus-circle' :
+                        'plus-circle'}
+          />
+          <span>Job Metrics (relative to other potions)</span>
+        </div>
+        <div className={this.state.expanded.jobMetrics ?
+              classes.informationContainerExpanded :
+              classes.informationContainerCollapsed}
+             data-collapse-id="jobMetrics">
+          <div className={classes.informationContent}>
+            <div className={classes.jobMetrics}>
+              <div className={classes.jobMetric}>
+                <div className={classes.salary}>
+                  <div className={classes.jobMetricSliderLabel}>
+                    Salary
+                  </div>
+                  <Slider className={classes.jobMetricSlider}
+                          defaultValue={careerProfileInformation.jobMetrics.salary}
+                          disabled={true}
+                          included={true}
+                          max={jobMetricsInformation.upperSalaryBound}
+                          marks={{50000: 'Less', 150000: 'More'}}
+                          min={jobMetricsInformation.lowerSalaryBound}
+                          step={1000}
+                          tipFormatter={(salary) => {
                         return 'The average annual salary for a ' + careerProfileInformation.title + ' is $' +
                           salary + '.'
                       }}
-                />
+                  />
+                </div>
               </div>
-            </div>
-            <div className={classes.jobMetric}>
-              <div className={classes.jobMetricSliderLabel}>
-                Collaboration
-              </div>
-              <div className={classes.collaboration}>
-                <Slider className={classes.jobMetricSlider}
-                        defaultValue={careerProfileInformation.jobMetrics.collaboration}
-                        disabled={true}
-                        included={true}
-                        max={jobMetricsInformation.upperCollaborationBound}
-                        marks={{1: 'Less', 9: 'More'}}
-                        min={jobMetricsInformation.lowerCollaborationBound}
-                        step={1}
-                        tipFormatter={(collaborationScore) => {
+              <div className={classes.jobMetric}>
+                <div className={classes.jobMetricSliderLabel}>
+                  Collaboration
+                </div>
+                <div className={classes.collaboration}>
+                  <Slider className={classes.jobMetricSlider}
+                          defaultValue={careerProfileInformation.jobMetrics.collaboration}
+                          disabled={true}
+                          included={true}
+                          max={jobMetricsInformation.upperCollaborationBound}
+                          marks={{1: 'Less', 9: 'More'}}
+                          min={jobMetricsInformation.lowerCollaborationBound}
+                          step={1}
+                          tipFormatter={(collaborationScore) => {
                         return 'A ' + careerProfileInformation.title + ' typically works with ' + collaborationScore +
                           ((collaborationScore === 1) ? ' colleague' : ' colleagues') + ' during a regular work day.'
                       }}
-                />
+                  />
+                </div>
               </div>
-            </div>
-            <div className={classes.jobMetric}>
-              <div className={classes.jobMetricSliderLabel}>
-                Hours
-              </div>
-              <div className={classes.hours}>
-                <Slider className={classes.jobMetricSlider}
-                        defaultValue={careerProfileInformation.jobMetrics.hours}
-                        disabled={true}
-                        included={true}
-                        max={jobMetricsInformation.upperHoursBound}
-                        marks={{45: 'Less', 75: 'More'}}
-                        min={jobMetricsInformation.lowerHoursBound}
-                        step={1}
-                        tipFormatter={(hours) => {
+              <div className={classes.jobMetric}>
+                <div className={classes.jobMetricSliderLabel}>
+                  Hours
+                </div>
+                <div className={classes.hours}>
+                  <Slider className={classes.jobMetricSlider}
+                          defaultValue={careerProfileInformation.jobMetrics.hours}
+                          disabled={true}
+                          included={true}
+                          max={jobMetricsInformation.upperHoursBound}
+                          marks={{45: 'Less', 75: 'More'}}
+                          min={jobMetricsInformation.lowerHoursBound}
+                          step={1}
+                          tipFormatter={(hours) => {
                         return 'On average, a ' + careerProfileInformation.title + ' works ' + hours + ' hours a week.'
                       }}
-                />
+                  />
+                </div>
               </div>
             </div>
           </div>
         </div>
 
-        <div className={classes.transferableSkillsLabel}>Transferable Skills from your Background in {userInformation.originIndustry}</div>
-        <div className={classes.informationContainer}>
-          <div className={classes.transferableSkills}>
-            <ul>
-              {careerProfileInformation.transferableSkills.map(function(transferableSkill, index) {
-                return <li key={index}>{transferableSkill}</li>
-              })}
-            </ul>
+        <div className={classes.informationLabel}
+             data-expand-target="transferableSkills"
+             onClick={this.toggleExpand.bind(this)}>
+          <FontAwesome className={this.state.expanded.transferableSkills ?
+                        classes.collapseIcon :
+                        classes.expandIcon}
+                       name={this.state.expanded.transferableSkills ?
+                        'minus-circle' :
+                        'plus-circle'}
+          />
+          <span>Transferable Skills from your Background in {userInformation.originIndustry}</span>
+        </div>
+        <div className={this.state.expanded.transferableSkills ?
+              classes.informationContainerExpanded :
+              classes.informationContainerCollapsed}
+             data-collapse-id="transferableSkills">
+          <div className={classes.informationContent}>
+            <div className={classes.transferableSkills}>
+              <ul>
+                {careerProfileInformation.transferableSkills.map(function(transferableSkill, index) {
+                  return <li key={index}>{transferableSkill}</li>
+                })}
+              </ul>
+            </div>
           </div>
         </div>
 
-        <div className={classes.skillGapsLabel}>Skill Gaps coming from {userInformation.originIndustry}</div>
-        <div className={classes.informationContainer}>
-          <div className={classes.skillGaps}>
-            <ul>
-              {careerProfileInformation.skillGaps.map(function(skillGap, index) {
-                return <li key={index}>{skillGap}</li>
-              })}
-            </ul>
+        <div className={classes.informationLabel}
+             data-expand-target="skillGaps"
+             onClick={this.toggleExpand.bind(this)}>
+          <FontAwesome className={this.state.expanded.skillGaps ?
+                        classes.collapseIcon :
+                        classes.expandIcon}
+                       name={this.state.expanded.skillGaps ?
+                        'minus-circle' :
+                        'plus-circle'}
+          />
+          <span>Skill Gaps coming from {userInformation.originIndustry}</span>
+        </div>
+        <div className={this.state.expanded.skillGaps ?
+              classes.informationContainerExpanded :
+              classes.informationContainerCollapsed}
+             data-collapse-id="skillGaps">
+          <div className={classes.informationContent}>
+            <div className={classes.skillGaps}>
+              <ul>
+                {careerProfileInformation.skillGaps.map(function(skillGap, index) {
+                  return <li key={index}>{skillGap}</li>
+                })}
+              </ul>
+            </div>
           </div>
         </div>
       </div>
