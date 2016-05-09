@@ -95,11 +95,11 @@
 .rc-slider-disabled .rc-slider-dot {
   border-color: #ccc;
   background-color: #fff;
-  cursor: not-allowed;
+  cursor: default;
 }
 .rc-slider-disabled .rc-slider-mark-text,
 .rc-slider-disabled .rc-slider-dot {
-  cursor: not-allowed !important;
+  cursor: default !important;
 }
 .rc-slider-vertical {
   width: 4px;
