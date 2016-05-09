@@ -1,0 +1,125 @@
+@import '../../../styles/base';
+
+.careerProfileContainer {
+}
+
+//MAJOR PROFILE ELEMENTS
+
+.icon {
+  font-size: 50px;
+}
+
+.backButton {
+  cursor: pointer;
+}
+
+.arrowHead {
+  border-bottom: 18px solid transparent;
+  border-right: 18px solid lightgray;
+  border-top: 18px solid transparent;
+  float: left;
+  height: 0px;
+  margin-top: 5px;
+  width: 0px;
+}
+
+.arrowBody {
+  background-color: lightgray;
+  color: white;
+  float: left;
+  font-size: 18px;
+  height: 35px;
+  margin-top: 5px;
+  padding: 5px;
+  width: 75px;
+}
+
+.title {
+  font-size: 30px;
+}
+
+.title > span {
+  position: relative;
+  right: 47px;
+}
+
+.collapseIcon {
+  margin-right: 10px;
+}
+
+.expandIcon {
+  margin-right: 10px;
+  pointer-events: none;
+}
+
+.informationLabel {
+  cursor: pointer;
+  font-size: 18px;
+  margin-top: 30px;
+  text-align: left;
+}
+
+.informationLabel > span {
+  pointer-events: none;
+}
+
+.informationContainerCollapsed {
+  animation: collapse 0.25s linear;
+  border: 1px solid grey;
+  border-radius: 15px;
+  margin-top: 10px;
+  max-height: 0px;
+  overflow: hidden;
+  text-align: justify;
+}
+
+.informationContainerExpanded {
+  animation: expand 0.5s linear;
+  border: 1px solid grey;
+  border-radius: 15px;
+  margin-top: 10px;
+  max-height: 500px;
+  overflow: hidden;
+  text-align: justify;
+}
+
+.informationContent {
+  padding: 10px;
+}
+
+//SLIDER ELEMENTS
+.jobMetricsLabel {
+  font-size: 18px;
+  margin-top: 30px;
+  text-align: left;
+}
+
+.jobMetrics {
+  display: flex;
+}
+
+.jobMetric {
+  flex: 1 1 100px;
+  height: 75px;
+  padding: 0px 50px;
+}
+
+.jobMetricSliderLabel {
+  font-weight: bold;
+  text-align: center;
+}
+
+.jobMetricSlider {
+  margin-top: 10px;
+  background-color: dodgerblue;
+}
+
+@keyframes expand {
+  0% {max-height: 0px;}
+  100% {max-height: 500px;}
+}
+
+@keyframes collapse {
+  0% {max-height: 500px;}
+  100% {max-height: 0px;}
+}

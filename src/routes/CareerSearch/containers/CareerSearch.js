@@ -33,6 +33,13 @@ const careerTileInformation = [
   },
   {
     image: null,
+    faIcon: 'book',
+    title: 'Science Librarian',
+    description: 'Research technical information to support scientists in government and private industry',
+    path: '/careers/science_librarian'
+  },
+  {
+    image: null,
     faIcon: 'question-circle',
     title: 'Contact Us',
     description: 'Don\'t see the position you\'re looking for? Tell us and we\'ll get the information you need.',
@@ -41,8 +48,8 @@ const careerTileInformation = [
 ]
 
 export class CareerSearch extends React.Component {
-  props: Props;
 
+  props: Props;
 
   render() {
     return (

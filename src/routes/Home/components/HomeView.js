@@ -113,7 +113,7 @@ export class HomeView extends React.Component {
           </div>
           <div className={classes.modalRedirectButtons}>
             <Link className={classes.modalRedirectButton} to='/signup'>Yes</Link>
-            <Link className={classes.modalRedirectButton} to='/careers'>No</Link>
+            <Link className={classes.modalRedirectButton} to='/career_search'>No</Link>
           </div>
         </Modal>
       </div>
