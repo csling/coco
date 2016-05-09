@@ -1,0 +1,83 @@
+@import '../../../styles/base';
+
+.careerProfileContainer {
+
+}
+
+.icon {
+  font-size: 50px;
+}
+
+.backButton {
+  float: left;
+  font-size: 18px;
+}
+
+.title {
+  font-size: 30px;
+}
+
+.descriptionLabel {
+  font-size: 18px;
+  margin-top: 30px;
+  text-align: left;
+}
+
+.description {
+  border: 1px solid grey;
+  margin-top: 20px;
+  padding: 10px;
+  text-align: justify;
+}
+
+.exampleTasksLabel {
+  font-size: 18px;
+  margin-top: 30px;
+  text-align: left;
+}
+
+.exampleTasks {
+  border: 1px solid grey;
+  margin-top: 20px;
+  padding: 10px;
+  text-align: justify;
+}
+
+.jobMetricsLabel {
+  font-size: 18px;
+  margin-top: 30px;
+  text-align: left;
+}
+
+.jobMetrics {
+  border: 1px solid grey;
+  margin-top: 20px;
+  padding: 10px;
+  text-align: justify;
+}
+
+.transferableSkillsLabel {
+  font-size: 18px;
+  margin-top: 30px
+  text-align: left;
+}
+
+.transferableSkills {
+  border: 1px solid grey;
+  margin-top: 20px;
+  padding: 10px;
+  text-align: justify;
+}
+
+.skillGapsLabel {
+  font-size: 18px;
+  margin-top: 30px;
+  text-align: left;
+}
+
+.skillGaps {
+  border: 1px solid grey;
+  margin-top: 20px;
+  padding: 10px;
+  text-align: justify;
+}
