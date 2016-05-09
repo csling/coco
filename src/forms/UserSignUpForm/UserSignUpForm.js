@@ -66,7 +66,7 @@ UserSignUpForm.propTypes = {
 UserSignUpForm = reduxForm({
   form: 'userSignUp',
   fields,
-  // validate: validateUserSignUpForm
+  validate: validateUserSignUpForm
 })(UserSignUpForm)
 
 export default UserSignUpForm
