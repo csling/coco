@@ -1,8 +1,9 @@
 @import '../../../styles/base';
 
 .careerProfileContainer {
-
 }
+
+//MAJOR PROFILE ELEMENTS
 
 .icon {
   font-size: 50px;
@@ -17,17 +18,18 @@
   font-size: 30px;
 }
 
+.informationContainer {
+  border: 1px solid grey;
+  border-radius: 15px;
+  margin-top: 10px;
+  padding: 10px;
+  text-align: justify;
+}
+
 .descriptionLabel {
   font-size: 18px;
   margin-top: 30px;
   text-align: left;
-}
-
-.description {
-  border: 1px solid grey;
-  margin-top: 20px;
-  padding: 10px;
-  text-align: justify;
 }
 
 .exampleTasksLabel {
@@ -36,37 +38,10 @@
   text-align: left;
 }
 
-.exampleTasks {
-  border: 1px solid grey;
-  margin-top: 20px;
-  padding: 10px;
-  text-align: justify;
-}
-
-.jobMetricsLabel {
+.transferableSkillsLabel {
   font-size: 18px;
   margin-top: 30px;
   text-align: left;
-}
-
-.jobMetrics {
-  border: 1px solid grey;
-  margin-top: 20px;
-  padding: 10px;
-  text-align: justify;
-}
-
-.transferableSkillsLabel {
-  font-size: 18px;
-  margin-top: 30px
-  text-align: left;
-}
-
-.transferableSkills {
-  border: 1px solid grey;
-  margin-top: 20px;
-  padding: 10px;
-  text-align: justify;
 }
 
 .skillGapsLabel {
@@ -75,9 +50,29 @@
   text-align: left;
 }
 
-.skillGaps {
-  border: 1px solid grey;
-  margin-top: 20px;
-  padding: 10px;
-  text-align: justify;
+//SLIDER ELEMENTS
+.jobMetricsLabel {
+  font-size: 18px;
+  margin-top: 30px;
+  text-align: left;
+}
+
+.jobMetrics {
+  display: flex;
+}
+
+.jobMetric {
+  flex: 1 1 100px;
+  height: 75px;
+  padding: 0px 50px;
+}
+
+.jobMetricSliderLabel {
+  font-weight: bold;
+  text-align: center;
+}
+
+.jobMetricSlider {
+  margin-top: 10px;
+  background-color: dodgerblue;
 }
