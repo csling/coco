@@ -1,6 +1,6 @@
 {
-  "name": "Course Correct",
-  "version": "1.0",
+  "name": "course-correct",
+  "version": "0.0.1",
   "description": "",
   "main": "index.js",
   "engines": {
@@ -76,7 +76,7 @@
     "url": "git+https://github.com/csling/coco.git"
   },
   "author": "",
-  "license": "",
+  "license": "MI",
   "dependencies": {
     "babel-cli": "^6.5.1",
     "babel-core": "^6.3.17",
