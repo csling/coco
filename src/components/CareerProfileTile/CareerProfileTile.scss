@@ -1,0 +1,32 @@
+@import '../../styles/base';
+
+.container {
+  border: 1px dashed grey;
+  border-radius: 15px;
+  color: black;
+  flex: 1 1 0;
+  height: 200px;
+  margin: 20px;
+  padding: 20px;
+  width: 200px;
+}
+
+.container:hover {
+  border: 1px solid dodgerblue;
+  color: dodgerblue;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.faIcon {
+  font-size: 30px;
+}
+
+.title {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 5px 0px;
+}
+.description {
+  font-style: italic;
+}
