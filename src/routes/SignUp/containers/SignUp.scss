@@ -85,6 +85,11 @@
   text-align: center;
 }
 
+a.modalRedirectButton {
+  text-decoration: none;
+  color: white;
+}
+
 .modalFooter {
   display: flex;
   flex-flow: row;
@@ -98,10 +103,8 @@
 }
 
 .envelopeIcon:hover {
-  animation: highlight linear 0.05s;
-  font-size: 45px;
+  animation: highlight linear 0.25s;
   color: dodgerblue;
-  transform: translate(0px, -5px);
 }
 
 .modalFooterMessage {
@@ -111,6 +114,6 @@
 }
 
 @keyframes highlight {
-  0%   {font-size: 40px; color: black; transform: translate(0px, 0px)}
-  100% {font-size: 45px; color: dodgerblue; transform: translate(0px, -5px)}
+  0%   {color: black;}
+  100% {color: dodgerblue;}
 }
