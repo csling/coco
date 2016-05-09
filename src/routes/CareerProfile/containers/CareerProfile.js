@@ -62,6 +62,12 @@ const jobMetricsInformation = {
 
 export class CareerProfile extends React.Component {
 
+  componentWillMount() {
+    if (!hardCodedProfiles[this.props.params.career]) {
+      this.props.router.push('/career_search');
+    }
+  }
+
   constructor(props) {
     super(props)
     this.state = {
@@ -74,10 +80,6 @@ export class CareerProfile extends React.Component {
       },
 
       career: hardCodedProfiles[this.props.params.career]
-    }
-
-    if (!this.state.career) {
-      this.props.router.push('/career_search');
     }
   }
 
