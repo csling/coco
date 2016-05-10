@@ -93,11 +93,12 @@ a.modalRedirectButton {
 .modalFooter {
   display: flex;
   flex-flow: row;
-  margin-top: 50px;
+  margin-top: 30px;
   text-align: center;
 }
 
 .envelopeIcon {
+  color: black;
   cursor: pointer;
   font-size: 40px;
 }
