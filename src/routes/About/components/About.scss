@@ -98,6 +98,19 @@
   padding: 15px 30px;
 }
 
+//FAQ TABLE STYLING
+.question {
+  background-color: lightgrey;
+  border: 1px solid grey;
+  font-weight: bold;
+  padding: 5px 5px 0px 5px;
+}
+
+.answer {
+  border: 1px solid grey;
+  padding: 5px 5px 0px 5px;
+}
+
 // ANIMATIONS
 @keyframes fadeInPane {
   0%   {filter: blur(2px); opacity: 0; transform: translate(0px, 20px)}

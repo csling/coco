@@ -122,26 +122,50 @@ export class About extends React.Component {
         <div className={this.state.selectedPane === 2 ? classes.aboutPaneActive: classes.aboutPane}>
           <div className={classes.paneTitle}>FAQs</div>
           <div className={classes.paneContent}>
-            <p>The secret to doing anything is believing that you can do it. Anything that you believe you can do strong
-              enough, you can do. Anything. As long as you believe. We'll play with clouds today. Be careful. You can
-              always
-              add more - but you can't take it away. You don't have to spend all your time thinking about what you're
-              doing,
-              you just let it happen. Just go back and put one little more happy tree in there. Don't be afraid to make
-              these big decisions. Once you start, they sort of just make themselves.</p>
-
-            <p>Here's something that's fun. Just pretend you are a whisper floating across a mountain. Let's put a touch
-              more of the magic here.</p>
-
-            <p>All you need to paint is a few tools, a little instruction, and a vision in your mind. Even the worst
-              thing
-              we can do here is good. Now let's put some happy little clouds in here. And I will hypnotize that just a
-              little bit.</p>
-
-            <p>This is the fun part Just make little strokes like that. Let's get crazy. Nothing wrong with washing your
-              brush. Pretend you're water. Just floating without any effort. Having a good day. If what you're doing
-              doesn't
-              make you happy - you're doing the wrong thing.</p>
+            <div className={classes.question}>
+              <p>Q: What is a Course Correct?</p>
+            </div>
+            <div className={classes.answer}>
+              <p>A: A course correct is characterized by a change to an existing path. In the context of your career this
+              means....</p>
+            </div>
+            <div className={classes.question}>
+              <p>Q2: Do I need to go through each step?</p>
+            </div>
+            <div className={classes.answer}>
+              <p>A2: This would be a semi-long winded answer. This would be a semi-long winded answer. This would be a
+                semi-long winded answer. This would be a semi-long winded answer. This would be a semi-long winded
+                answer. This would be a semi-long winded answer. This would be a semi-long winded answer. This would
+                be a semi-long winded answer.</p>
+            </div>
+            <div className={classes.question}>
+              <p>Q3: Are you against people being lawyers or scientists? (Or why are you so anti-lawyers/scientists?</p>
+            </div>
+            <div className={classes.answer}>
+              <p>A3: We're not! We just think people should all the requisite infomation at their disposal and - should
+                they decide to leave - know they have options outside their tracks. This would be a semi-long winded
+                answer. This would be a semi-long winded answer. This would be a semi-long winded answer. This would be
+                a semi-long winded answer. This would be a semi-long winded answer. This would be a semi-long winded
+                answer. This would be a semi-long winded answer. This would be a semi-long winded answer. This would be
+                a semi-long winded answer. This would be a semi-long winded answer. This would be a semi-long winded
+                answer. This would be a semi-long winded answer. This would be a semi-long winded answer. This would be
+                a semi-long winded answer. This would be a semi-long winded answer. This would be a semi-long winded
+                answer.</p>
+            </div>
+            <div className={classes.question}>
+              <p>Q4: Questiony question question</p>
+            </div>
+            <div className={classes.answer}>
+              <p>A4: We believe attitude and aptitude are much better indicators of success</p>
+            </div>
+            <div className={classes.question}>
+              <p>Q5: Last question?</p>
+            </div>
+            <div className={classes.answer}>
+              <p>A5: This would be a semi-long winded answer. This would be a semi-long winded answer. This would be a
+                semi-long winded answer. This would be a semi-long winded answer. This would be a semi-long winded
+                answer. This would be a semi-long winded answer. This would be a semi-long winded answer.</p>
+            </div>
           </div>
         </div>
       </div>
