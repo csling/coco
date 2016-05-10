@@ -5,7 +5,7 @@ import { initialize } from 'redux-form';
 
 import { submitEmployerForm } from '../modules/forEmployers'
 
-import EmployerContactForm from 'forms/EmployerContactForm/EmployerContactForm'
+import ContactForm from 'forms/ContactForm/ContactForm'
 
 type Props = {
 
@@ -27,7 +27,7 @@ export class ForEmployers extends React.Component {
           you to them.</p>
         <p className={classes.content}>If you are interested in bringing this type of talent to your workplace,
         contact us below.</p>
-        <EmployerContactForm onSubmit={this.handleSubmit}/>
+        <ContactForm onSubmit={this.handleSubmit}/>
       </div>
     )
   }
