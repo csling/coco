@@ -91,7 +91,9 @@ export class SignUp extends React.Component {
             <Link className={classes.modalRedirectButton} to='/career_search'>Explore Careers</Link>
           </div>
           <div className={classes.modalFooter}>
-            <FontAwesome className={classes.envelopeIcon} name='envelope-square'/>
+            <Link className={classes.contactUsRedirectButton} to='/contact_us'>
+              <FontAwesome className={classes.envelopeIcon} name='envelope-square'/>
+            </Link>
             <div className={classes.modalFooterMessage}>
               Have a question or comment? Leave us a message!
             </div>
