@@ -1,0 +1,113 @@
+@import '../../styles/base';
+
+// STEP STYLES //
+
+.stepConnectionIncomplete {
+  flex: 1 1 0;
+  border-top: 5px solid grey;
+  height: 150px;
+  margin: 0px -25px;
+  opacity: 0.2;
+}
+
+.stepConnectionComplete {
+  flex: 1 1 0;
+  border-top: 5px solid grey;
+  height: 150px;
+  margin: 0px -25px;
+}
+
+.stepContainer {
+  flex: 0 0 100px;
+  height: 300px;
+}
+
+.stepContent {
+  width: 200px;
+  margin: 0 auto;
+}
+
+.stepDescription {
+  font-size: 14px;
+}
+
+.stepsContainer {
+  align-items: center;
+  display: flex;
+  flex-flow: row wrap;
+  margin: 50px auto;
+  width: 100%;
+}
+
+.stepImage {
+  font-size: 100px;
+}
+
+.completedStepImage {
+  border: 5px solid grey;
+  border-radius: 150px;
+  display: inline-block;
+  height: 150px;
+  padding: 20px;
+  width: 150px;
+  z-index: 10;
+}
+
+.currentStepImage {
+  border: 5px double grey;
+  border-radius: 150px;
+  display: inline-block;
+  height: 150px;
+  padding: 20px;
+  width: 150px;
+  z-index: 10;
+}
+
+.upcomingStepImage {
+  border: 5px dashed grey;
+  border-radius: 150px;
+  display: inline-block;
+  height: 150px;
+  opacity: 0.2;
+  padding: 20px;
+  width: 150px;
+  z-index: 10;
+}
+
+.stepTitleMajor {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  width: 100%;
+}
+
+.stepTitleMinor {
+  font-size: 16px;
+  margin-bottom: 5px;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.stepOneIcon {
+  color: grey;
+  font-size: 100px;
+  z-index: 1;
+}
+
+.stepTwoIcon {
+  color: orangered;
+  font-size: 100px;
+  z-index: 1;
+}
+
+.stepThreeIcon {
+  color: darkseagreen;
+  font-size: 100px;
+  z-index: 1;
+}
+
+.stepFourIcon {
+  color: navy;
+  font-size: 100px;
+  z-index: 1;
+}
