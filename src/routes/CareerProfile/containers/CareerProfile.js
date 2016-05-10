@@ -6,13 +6,16 @@ import { withRouter } from 'react-router'
 import FontAwesome from 'react-fontawesome'
 import Slider from 'rc-slider'
 
+import ProgressBar from '../../../components/CourseCorrectProgressBarDetailed'
+
 type Props = {
 
 }
 
 const hardCodedProfiles = {
   science_librarian: {
-    title: 'Science Librarian',
+    titleSingular: 'Science Librarian',
+    titlePlural: 'Science Librarians',
     image: null,
     faIcon: 'book',
     description: ['Although largely employed in research libraries by universities, science librarians can also be ' +
@@ -48,7 +51,8 @@ const hardCodedProfiles = {
 
 const userInformation = {
   originIndustry: 'Law',
-  originJob: 'Lawyer'
+  originJobTitleSingular: 'Lawyer',
+  originJobTitlePlural: 'Lawyers'
 }
 
 const jobMetricsInformation = {
@@ -97,6 +101,14 @@ export class CareerProfile extends React.Component {
     this.props.router.goBack()
   }
 
+  goCareerSearch() {
+    this.props.router.push('/career_search')
+  }
+
+  goContactUs() {
+    this.props.router.push('/contact_us')
+  }
+
   render() {
     if (!this.state.career) {
       return <div></div>
@@ -114,7 +126,7 @@ export class CareerProfile extends React.Component {
               <div className={classes.arrowHead}></div>
               <div className={classes.arrowBody}>Back</div>
             </div>
-            <span>{this.state.career.title}</span>
+            <span>{this.state.career.titleSingular}</span>
           </div>
 
           <div className={classes.informationLabel}
@@ -200,7 +212,7 @@ export class CareerProfile extends React.Component {
                             min={jobMetricsInformation.lowerSalaryBound}
                             step={1000}
                             tipFormatter={(salary) => {
-                        return 'The average annual salary for a ' + this.state.career.title + ' is $' +
+                        return 'The average annual salary for a ' + this.state.career.titleSingular + ' is $' +
                           salary + '.'
                       }}
                     />
@@ -220,7 +232,7 @@ export class CareerProfile extends React.Component {
                             min={jobMetricsInformation.lowerCollaborationBound}
                             step={1}
                             tipFormatter={(collaborationScore) => {
-                        return 'A ' + this.state.career.title + ' typically works with ' + collaborationScore +
+                        return 'A ' + this.state.career.titleSingular + ' typically works with ' + collaborationScore +
                           ((collaborationScore === 1) ? ' colleague' : ' colleagues') + ' during a regular work day.'
                       }}
                     />
@@ -240,7 +252,7 @@ export class CareerProfile extends React.Component {
                             min={jobMetricsInformation.lowerHoursBound}
                             step={1}
                             tipFormatter={(hours) => {
-                        return 'On average, a ' + this.state.career.title + ' works ' + hours + ' hours a week.'
+                        return 'On average, a ' + this.state.career.titleSingular + ' works ' + hours + ' hours a week.'
                       }}
                     />
                   </div>
@@ -300,6 +312,25 @@ export class CareerProfile extends React.Component {
                   })}
                 </ul>
               </div>
+            </div>
+          </div>
+          <div className={classes.careerProfileFooter}>
+            <div className={classes.header}>Think this is the career for you?</div>
+            <div className={classes.contactUs} onClick={this.goContactUs.bind(this)}>
+              <FontAwesome className={classes.envelopeIcon} name='envelope-square'/>
+              <div className={classes.contactUsMessage}>
+                {'Contact us and take the next steps towards your new career as a ' + this.state.career.titleSingular}
+              </div>
+            </div>
+            <ProgressBar originJobTitlePlural={userInformation.originJobTitlePlural}
+                         jobTitleSingular={this.state.career.titleSingular}
+                         jobTitlePlural={this.state.career.titlePlural}
+                         step={2}/>
+            <div className={classes.continueSearch} onClick={this.goCareerSearch.bind(this)}>
+              <div className={classes.continueSearchMessage}>
+                {'Or, continue exploring potential new careers'}
+              </div>
+              <FontAwesome className={classes.forwardIcon} name='forward'/>
             </div>
           </div>
         </div>

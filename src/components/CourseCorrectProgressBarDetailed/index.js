@@ -1,0 +1,3 @@
+import CourseCorrectProgressBarDetailed from './CourseCorrectProgressBarDetailed'
+
+export default CourseCorrectProgressBarDetailed
