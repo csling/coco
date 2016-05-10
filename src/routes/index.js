@@ -6,6 +6,7 @@ import CareerSearchRoute from './CareerSearch'
 import CareerProfileRoute from './CareerProfile'
 import ForEmployersRoute from './ForEmployers'
 import SignUpRoute from './SignUp'
+import ContactUsRoute from './ContactUs'
 import NotFound from './NotFound'
 
 export const createRoutes = (store) => ({
@@ -18,6 +19,7 @@ export const createRoutes = (store) => ({
     CareerProfileRoute(store),
     ForEmployersRoute(store),
     SignUpRoute(store),
+    ContactUsRoute(store),
     NotFound
   ]
 })
