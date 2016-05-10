@@ -1,7 +1,15 @@
 export default function validateContact(data, props) {
   const errors = {};
+  if(!data.contactMessage) {
+    errors.contactMessage = 'Your message can\'t be empty!';
+  }
+
   if(!data.contactName) {
     errors.contactName = 'A contact name is required!';
+  }
+
+  if(!data.companyName) {
+    errors.companyName = 'A company name is required!';
   }
 
   if(!data.contactEmailAddress) {

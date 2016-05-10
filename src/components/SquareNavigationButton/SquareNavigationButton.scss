@@ -1,0 +1,27 @@
+@import '../../styles/base';
+
+.container {
+  border: 1px dashed solid;
+  border-radius: 15px;
+  color: black;
+  height: 125px;
+  margin: 20px;
+  padding: 10px;
+  width: 150px;
+}
+
+.container:hover {
+  border: 1px solid dodgerblue;
+  color: dodgerblue;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.faIcon {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.buttonText {
+  font-size: 12px;
+}
