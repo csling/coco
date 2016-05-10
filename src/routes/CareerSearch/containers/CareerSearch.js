@@ -2,6 +2,7 @@ import React from 'react'
 import classes from './CareerSearch.scss'
 import { connect } from 'react-redux'
 
+import SquareNavigationButton from 'components/SquareNavigationButton/SquareNavigationButton'
 import CareerProfileTile from 'components/CareerProfileTile/CareerProfileTile'
 
 type Props = {
@@ -60,17 +61,31 @@ export class CareerSearch extends React.Component {
         <div className={classes.headerMinor}>
           Learn everything you need to know to make your career change
         </div>
-        <div className={classes.careerGallery}>
-          {careerTileInformation.map(function(careerInformation) {
-            return <CareerProfileTile className={classes.careerTile}
-                                      description={careerInformation.description}
-                                      key={careerInformation.title}
-                                      faIcon={careerInformation.faIcon}
-                                      image={careerInformation.image}
-                                      title={careerInformation.title}
-                                      path={careerInformation.path}
-            />
-          })}
+        <div className={classes.mainPane}>
+          <div className={classes.careerGallery}>
+            {careerTileInformation.map(function(careerInformation) {
+              return <CareerProfileTile className={classes.careerTile}
+                                        description={careerInformation.description}
+                                        key={careerInformation.title}
+                                        faIcon={careerInformation.faIcon}
+                                        image={careerInformation.image}
+                                        title={careerInformation.title}
+                                        path={careerInformation.path}
+              />
+            })}
+          </div>
+        </div>
+        <div className={classes.rightPane}>
+          <div className={classes.infoGallery}>
+              <SquareNavigationButton className={classes.infoTile}
+                                      buttonText={'Already know what career you want to go into? Let us help you get it!'}
+                                      faIcon='check'
+                                      path='/signup'/>
+            <SquareNavigationButton className={classes.infoTile}
+                                    buttonText={'Don\'t see what you\'re looking for? Let us know!'}
+                                    faIcon='question'
+                                    path='/contact_us'/>
+          </div>
         </div>
       </div>
     )
