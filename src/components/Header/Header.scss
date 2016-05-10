@@ -1,0 +1,25 @@
+@import '../../styles/base';
+
+.activeRoute {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.logoContainer {
+  flex-grow: 2;
+  height: 100%;
+  width: 100px;
+}
+
+.navbarContainer {
+  border: 3px solid $navbar-border-color;
+  display: flex;
+  flex-direction: row-reverse;
+  padding: 15px 0px;
+}
+
+.routeContainer {
+  flex-grow: 1;
+  font-weight: bold;
+  padding: 0px 25px;
+}

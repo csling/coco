@@ -1,0 +1,119 @@
+@import '../../../styles/base';
+
+// FOR EMPLOYERS PAGE CONTAINER
+.userSignUpContainer {
+  margin: 0px auto;
+  text-align: center;
+  width: 75%;
+}
+
+// HEADER
+.header {
+  margin-bottom: 20px;
+  font-size: 30px;
+}
+
+// BANNER
+.banner {
+  display: flex;
+  margin: 0px auto;
+  margin-bottom: 20px;
+  width: 80%;
+}
+
+.bannerImage {
+  font-size: 100px;
+  width: auto;
+}
+
+.bannerImageLine {
+  border: 2px solid grey;
+  flex-grow: 1;
+  height: 1px;
+  margin: auto 10px;
+}
+
+.userIcon {
+  color: orangered;
+}
+
+.circleArrowIcon {
+  color: darkseagreen;
+}
+
+.handRightIcon {
+  color: navy;
+}
+
+// TEXT CONTENT
+.content {
+  font-size: 20px;
+  margin: 0px auto;
+  margin-bottom: 50px;
+  text-align: center;
+  width: 80%;
+}
+
+// MODAL
+.modalBanner {
+  margin-top: 10px;
+  font-size: 30px;
+  text-align: center;
+}
+
+.modalMessage {
+  margin-top: 20px;
+  font-size: 18px;
+  text-align: center;
+}
+
+.modalRedirectButtons {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.modalRedirectButton {
+  background-color: mediumaquamarine;
+  border-radius: 15px;
+  color: white;
+  font-size: 18px;
+  height: 35px;
+  margin: 0px auto;
+  margin-top: 20px;
+  padding: 5px;
+  width: 175px;
+  text-align: center;
+}
+
+a.modalRedirectButton {
+  text-decoration: none;
+  color: white;
+}
+
+.modalFooter {
+  display: flex;
+  flex-flow: row;
+  margin-top: 50px;
+  text-align: center;
+}
+
+.envelopeIcon {
+  cursor: pointer;
+  font-size: 40px;
+}
+
+.envelopeIcon:hover {
+  animation: highlight linear 0.25s;
+  color: dodgerblue;
+}
+
+.modalFooterMessage {
+  font-size: 16px;
+  font-style: italic;
+  margin: 5px 15px;
+}
+
+@keyframes highlight {
+  0%   {color: black;}
+  100% {color: dodgerblue;}
+}

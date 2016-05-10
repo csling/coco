@@ -1,0 +1,61 @@
+@import '../../styles/base';
+
+// FORM CONTAINER
+.userSignUpFormContainer {
+  font-size: 18px;
+  width: 100%;
+}
+
+.formRow {
+  margin-bottom: 5px;
+}
+
+// LABELS
+label {
+  font-family: $content-text-font-family;
+  width: 175px;
+  text-align: left;
+}
+
+input {
+  font-family: $content-text-font-family;
+  font-style: normal;
+  padding: 0px 5px;
+  width: 250px;
+}
+
+.errorMessage {
+  animation: slideDown linear 0.05s;
+  color: red;
+  font-style: italic;
+  margin-left: 180px;
+}
+
+// BUTTONS
+.submitButton {
+  background-color: mediumaquamarine;
+  border: none;
+  border-radius: 25px;
+  color: white;
+  margin-top: 10px;
+  padding: 10px 50px;
+}
+
+// CHECKBOX
+input[type='checkbox'] {
+  width: auto;
+}
+
+.termsAndPolicyAgreement {
+  font-size: 14px;
+  margin-left: 10px;
+  margin-top: 30px;
+  width: auto;
+  text-align: left;
+}
+
+// ANIMATIONS
+@keyframes slideDown {
+  0%   {opacity: 0; transform: translate(0px, -10px)}
+  100% {opacity: 1; transform: translate(0px, 0px)}
+}
