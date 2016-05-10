@@ -1,6 +1,7 @@
 @import '../../../styles/base';
 
 .careerProfileContainer {
+  margin-bottom: 30px;
 }
 
 //MAJOR PROFILE ELEMENTS
@@ -9,7 +10,7 @@
   font-size: 50px;
 }
 
-.backButton {
+.backButton:hover {
   cursor: pointer;
 }
 
@@ -112,6 +113,66 @@
 .jobMetricSlider {
   margin-top: 10px;
   background-color: dodgerblue;
+}
+
+//FOOTER ELEMENTS
+.careerProfileFooter {
+  margin-top: 50px;
+}
+
+.header {
+  font-size: 30px;
+}
+
+.contactUs {
+  display: inline-block;
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+.contactUs:hover {
+  color: dodgerblue;
+  cursor: pointer;
+}
+
+.envelopeIcon {
+  display: inline-block;
+  font-size: 30px;
+  pointer-events: none;
+  position: relative;
+  top: 3px;
+}
+
+.contactUsMessage {
+  margin-left: 10px;
+  display: inline-block;
+  pointer-events: none;
+}
+
+.continueSearch {
+  display: inline-block;
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+.continueSearch:hover {
+  color: dodgerblue;
+  cursor: pointer;
+}
+
+.continueSearchMessage {
+  margin-right: 10px;
+  display: inline-block;
+  padding-bottom: 2px;
+  pointer-events: none;
+}
+
+.forwardIcon {
+  display: inline-block;
+  font-size: 25px;
+  pointer-events: none;
+  position: relative;
+  top: 2px;
 }
 
 @keyframes expand {
